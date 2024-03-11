@@ -3,7 +3,7 @@ from datasets import load_dataset
 import re
 import torch
 
-localModel = "~/models/donut-base-finetuned-docvqa"
+localModel = "/home/isaac/models/donut-base-finetuned-docvqa"
 processor = DonutProcessor.from_pretrained(localModel,local_files_only=True)
 processor.tokenizer.padding_side = 'left'
 model = VisionEncoderDecoderModel.from_pretrained(localModel)
